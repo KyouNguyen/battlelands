@@ -11,7 +11,6 @@ jQuery(document).ready(function($) {
             $(this).parent().outerHeight(summary_height);
         }
     });
-});
         
 var swiper = new Swiper(".section-gameplay .mySwiper", {
     spaceBetween: 10,
@@ -56,6 +55,8 @@ function playPause() {
         myVideo.pause();
     }
 }       
+
+});
 jQuery(document).ready(function($){ 
     $('.playPause-btn').click(function(){
         $('.icn-pause-play').toggle();
