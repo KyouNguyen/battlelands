@@ -12,6 +12,56 @@ jQuery(document).ready(function($) {
         }
     });
 });
+        
+var swiper = new Swiper(".section-gameplay .mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+var swiper2 = new Swiper(".section-gameplay .mySwiper2", {
+    spaceBetween: 10,
+    loop:true,
+    navigation: {
+      nextEl: ".gameplay-button-next",
+      prevEl: ".gameplay-button-prev",
+    },
+    thumbs: {
+        swiper: swiper,
+    },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+});
+
+var swiper3 = new Swiper(".own_lands_box_left .mySwiper", {
+    spaceBetween: 30,
+    slidesPerView: 3,
+    loop: true,
+    navigation: {
+        nextEl: ".own_lands-button-prev",
+        prevEl: ".own_lands-button-next",
+    },
+});
+
+AOS.init();
+
+var myVideo = document.getElementById("sectionBanner-video");
+function playPause() {
+    if (myVideo.paused) {
+        myVideo.play();
+    } else {
+        myVideo.pause();
+    }
+}       
+jQuery(document).ready(function($){ 
+    $('.playPause-btn').click(function(){
+        $('.icn-pause-play').toggle();
+        $('.image-video').toggle();
+    });
+});  
 
 jQuery(document).ready(function($) {
     if ($(window).width() < 1025) {
