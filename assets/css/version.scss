@@ -27,11 +27,11 @@ i.discord {
     content: url('../images/icons/discord.svg');
 }
 
-.parallax-overlay {
-    position: fixed;
-    opacity: 1;
-    visibility: visible;
-  }
+// .parallax-overlay {
+//     position: fixed;
+//     opacity: 1;
+//     visibility: visible;
+//   }
 
 #site-inner > .swiper-wrapper {
 }
@@ -174,11 +174,21 @@ i.discord {
       video{
         width: 100%;
       }
+      &:hover{
+        .icn-pause{
+          opacity: 1; 
+          visibility: visible;
+        }
+      }
     }
     .playPause-btn{
       position: absolute;
     }
     .icn-pause-play.icn-pause{display: none;}
+    .icn-pause{
+      opacity: 0;
+      visibility: hidden;
+    }
     .image-video{
       position: absolute;
       top: 0;
@@ -621,9 +631,6 @@ ul.nav-footer > *:is(.first-row, .second-row) {
   .footer-inner .logo {
     padding-right: 100px;
   }
-  .nav-top-inner, .container {
-      max-width: 1720px;
-  }
   .nav-items .item {
       margin: 0 30px;
   }
@@ -700,17 +707,10 @@ ul.nav-footer > *:is(.first-row, .second-row) {
   }
   
   .section-title {
-    font-size: 48px;
-  }
-  .section-2 .section-title {
-    font-size: 54px;
-  }
-  
-  .section-title {
     margin-bottom: .5rem;
   }
   .title-line {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
   }
   .bg-overlay {
     display: block;
@@ -736,17 +736,11 @@ ul.nav-footer > *:is(.first-row, .second-row) {
     padding: 0 2rem;
   }
 
-   *:is(.section-2) .bg-overlay {
-   }
+   
   .section-3 .container-inner {
     padding: 2rem 0 0;
   }
-  .trailer-wrapper {
-    padding: 0 2rem 5rem;
-  }
-  .section-4, .gameplay-inner, .gameplay-slider, .section-4 .swiper-wrapper {
-    min-height: unset;
-  }
+  
   .section-4 .container {
     top: 10px;
     width: 100%;
@@ -775,9 +769,6 @@ ul.nav-footer > *:is(.first-row, .second-row) {
   .section-4 .slide-title {
     height: 27px;
     max-width: unset;
-  }
-  .section-4 .swiper-slide > .box, .section-4 .swiper-slide > .obj2 {
-    top: 10px;
   }
   .gameplay-pagination {
     bottom: 2rem !important;
@@ -813,10 +804,17 @@ ul.nav-footer > *:is(.first-row, .second-row) {
       font-size: 32px;
       line-height: 46px;
   }
-
-  .social .social-item {
-      width: calc(100%/3);
-      flex-basis: calc(100%/3);
+  .trailer-wrapper .icn-pause-play{
+    width: 40px;
+    height: 40px;
+  }
+  .trailer-wrapper .icn-pause-play i{
+    font-size: 16px;
+  }
+  .section-6{
+    .container{
+      display: block;
+    }
   }
 }
 
@@ -881,7 +879,7 @@ ul.nav-footer > *:is(.first-row, .second-row) {
     margin-bottom: 5px;
   }
   .title-line {
-    margin-bottom: .5rem;
+    margin-bottom: 1.5rem;
     height: 15px;
   }
   .bg-overlay {
@@ -914,10 +912,6 @@ ul.nav-footer > *:is(.first-row, .second-row) {
   .section-3 .container-inner {
     padding: 1rem 0 0;
   }
-  .trailer-wrapper {
-    height: 300px;
-    padding-bottom: 2rem;
-  }
   .section-4, .gameplay-inner, .gameplay-slider, .section-4 .swiper-wrapper {
     min-height: unset;
   }
@@ -948,9 +942,6 @@ ul.nav-footer > *:is(.first-row, .second-row) {
   .section-4 .slide-title {
     height: 15px;
     max-width: unset;
-  }
-  .section-4 .swiper-slide > .box, .section-4 .swiper-slide > .obj2 {
-    top: 10px;
   }
   .gameplay-pagination {
     bottom: 2rem !important;
@@ -1462,7 +1453,9 @@ header{
     }
   }
  }
-
+ .roadmap-mobile{
+  display: none;
+  }
 // section-11
 .section-11{ 
   background: url('../images/bgsection11.png');
@@ -1606,6 +1599,11 @@ footer{
     max-width: 1430px;
   }
 }
+@media screen and (min-width: 1920px){ 
+  .nav-top-inner, .container {
+    max-width: 1720px;
+  }
+}
 @media (min-width: 1600px) and (max-width: 1919px){ 
   .section-gameplay.section-4{
     height: 1010px;
@@ -1665,4 +1663,480 @@ footer{
   .footer-inner .social{
     margin-top: 110px;
   }
+  .section-gameplay .container .container-inner .mySwiper2{
+    height: 540px; 
+  }
+  .section-gameplay .content-slide{max-width: 410px;}
+  .section-gameplay .section-title{margin-top: 25px;}
+  .section-7 .characters_weapons_box .list_weapon li, 
+  .section-7 .characters_weapons_box .list_charactor li{
+    max-width: 110px;
+  }
 }
+@media (min-width: 992px) and (max-width: 1299px){ 
+  .section-gameplay .gameplay-slider{
+    max-width: 800px;
+  }
+  .section-gameplay .container .container-inner .mySwiper2{
+    height: 500px;
+  }
+  .section-gameplay .container .container-inner .mySwiper{
+    height: 140px;
+  }
+  
+}
+@media (min-width: 1025px) and (max-width: 1299px){ 
+  .section-title ,
+  .section-8 .token_utilities_top .box_left .title, 
+  .section-8 .token_utilities_bottom .box_left .title {
+    font-size: 42px;
+  }
+  .section-8 .token_utilities_top .box_left .subtitle, 
+  .section-8 .token_utilities_bottom .box_left .subtitle,
+  .section-8 .token_utilities_top .box_left span, 
+  .section-8 .token_utilities_bottom .box_left span{
+    font-size: 26px;
+  }
+
+  .section-5 li,
+  .section-6 .own_lands_box .section-subtitle,
+  .section-about .about-content p,
+  .section-gameplay .content-slide .content,
+  .section-11 ul li .name_position .name,
+  .footer-inner .email,.section-8 .token_utilities_top .box_left ul li,
+  .section-8 .token_utilities_bottom .box_left ul li{
+    font-size: 20px;
+  }
+  .section-10 .list-roamap .item-roamap .title,.section-11 ul li .name_position .position{
+    font-size: 17px;
+  }
+  .section-10 .list-roamap .item-roamap ul li{
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .section-gameplay .content-slide .content{
+    max-width: 50%;
+  }
+  .section-7 .characters_weapons_box .list_weapon li, .section-7 .characters_weapons_box .list_charactor li{
+    max-width: 90px;
+  }
+  .section-11 ul li img{
+    max-width: 165px;
+  }
+  
+  .logo{
+    max-width: 100px;
+  }
+  .nav-items a{
+    font-size: 19px;
+  }
+  header .btn_header{
+    width: 130px;
+  }
+  .nav-top{
+    height: 75px;
+  }
+  .about-image{
+    max-width: 250px;
+  }
+  
+}
+@media (min-width: 600px) and (max-width: 1024px){ 
+  .section-gameplay .gameplay-slider{
+    max-width: 600px;
+  }
+  .section-gameplay .container .container-inner .mySwiper2{
+    height: 400px;
+  }
+  .section-gameplay .container .container-inner .mySwiper{
+    height: 80px;
+  }
+  .section-gameplay .gameplay-slider .gameplay-button-prev{
+    left: -60px;
+  }
+  .section-gameplay .gameplay-slider .gameplay-button-next{
+    right: -60px;
+  }
+}
+@media (max-width: 1600px){ 
+  .section-12 .list_partners{
+    max-width: 100%;
+  }
+}
+@media (max-width: 1299px){ 
+  .nav-top-inner, .container {
+    padding: 0 15px;
+  }
+  .btn-banner .item-btn-banner {
+    width: 120px;
+  }
+  .section-about.section-2{
+    height: auto;
+  }
+  .footer-menu{
+    display: none;
+  }
+  .section-12 .partners-top .title img{
+    max-width: 300px;
+  }
+  .footer-inner .social{
+    margin-top: 65px;
+    i{opacity: 1;}
+  }
+  .section-6,.section-7{
+    height: auto;
+  }
+  .section-6 .own_lands_box .own_lands_box_left{
+    height: max-content;
+    min-height: auto;
+  }
+  .section-6 .own_lands_box .own_lands_box_left .mySwiper{
+    min-height: auto;
+  }
+  .section-gameplay .gameplay-slider .gameplay-button-prev, 
+  .section-gameplay .gameplay-slider .gameplay-button-next ,
+  .section-6 .own_lands-button .own_lands-button-prev,
+  .section-6 .own_lands-button .own_lands-button-next{
+    max-width: 45px;
+  }
+  .section-gameplay .content-slide .content{
+    max-width: 50%;
+  }
+  .content-slide img{
+    max-width: 215px;
+  }
+}
+@media (max-width: 1024px){ 
+  .section-1{
+    .bg-overlay{display: none;}
+  }
+
+  .section-title ,
+  .section-8 .token_utilities_top .box_left .title, 
+  .section-8 .token_utilities_bottom .box_left .title ,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .title,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .money{
+    font-size: 34px;
+  }
+  .section-8 .token_utilities_top .box_left .subtitle, 
+  .section-8 .token_utilities_bottom .box_left .subtitle,
+  .section-8 .token_utilities_top .box_left span, 
+  .section-8 .token_utilities_bottom .box_left span,
+  .section-7 .characters_weapons_box .title,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .subtitle{
+    font-size: 23px; 
+  }
+
+  .section-5 li,
+  .section-6 .own_lands_box .section-subtitle,
+  .section-about .about-content p,
+  .section-gameplay .content-slide .content,
+  .section-11 ul li .name_position .name,
+  .footer-inner .email,.section-8 .token_utilities_top .box_left ul li,
+  .section-8 .token_utilities_bottom .box_left ul li,
+  .section-10 .list-roamap .item-roamap ul li,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .content{
+    font-size: 17px;
+  }
+  .section-10 .list-roamap .item-roamap .title,.section-11 ul li .name_position .position{
+    font-size: 14px;
+  }
+  .section-7 .characters_weapons_box {
+    align-items: center;
+    .characters_weapons_left{
+      max-width: 310px;
+    }
+    .characters_weapons_right{
+      width: calc(100% - 310px);
+    }
+    .list_weapon, .list_charactor{
+      li{
+        max-width: 60px;
+      }
+    }
+  }
+  .section-11 ul li img{
+    max-width: 120px;
+  }
+  .section-12 .list_partners ul li{
+    max-width: 85px;
+  }
+  .footer-inner .social{
+    justify-content: center;
+    a{
+      margin: 0 15px;
+    }
+  }
+  footer {
+    padding-top: 40px;
+  }
+  .section-4 {
+    min-height: 650px;
+  }
+  .section-6 .own_lands_box .own_lands_box_right{
+    width: 300px;
+  }
+  .section-6 .own_lands_box .own_lands_box_left{
+    width: calc(100% - 300px);
+  }
+  .section-gameplay .content-slide{
+    top: 30px;
+    left: 30px;
+  }
+} 
+
+@media (max-width:992px){ 
+  .section-6 .own_lands_box .own_lands_box_right{
+    width: 200px;
+  }
+  .section-6 .own_lands_box .own_lands_box_left{
+    width: calc(100% - 200px);
+  }
+  .section-6 .own_lands_box .own_lands_box_left .mySwiper{
+    max-width: calc(100vw - 200px);
+  }
+  .btn-banner{
+    bottom: 40px;
+  }
+}
+@media (max-width:767px){ 
+  .section-gameplay .gameplay-slider .gameplay-button-prev,
+  .section-gameplay .gameplay-slider .gameplay-button-next{
+    display: none;
+  }
+  .section-5 .container {
+    left: 0;
+  }
+  .section-5 .invest-to-earn-box .box-left, .section-5 .invest-to-earn-box .box-right{
+    width: 100%;
+  }
+  .section-5 .invest-to-earn-box .box-left{
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+  }
+  .section-7 .characters_weapons_box .characters_weapons_left,
+  .section-7 .characters_weapons_box .characters_weapons_right,
+  .section-7 .characters_weapons_box .characters_weapons_right .img_box,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box{
+    width: 100%;
+  }
+  .section-7 .characters_weapons_box .characters_weapons_right .img_box{ 
+    max-width: 250px;
+    margin: auto;
+  }
+  .section-7 .characters_weapons_box .characters_weapons_left{
+    margin: auto;
+  }
+  .section-7 .characters_weapons_box .title{
+    text-align: center;
+  }
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box{
+    text-align: center;
+  }
+}
+@media (max-width:600px){ 
+  .section-gameplay .container .container-inner .mySwiper2{
+    height: 300px;
+  }
+  .section-gameplay .container .container-inner .mySwiper{
+    height: 70px;
+  }
+  .section-4 {
+    min-height: 500px;
+  }
+  .content-slide img {
+    max-width: 130px;
+  }
+  .section-gameplay .content-slide .content{
+    margin-top: 10px;
+  }
+  
+  .section-title ,
+  .section-8 .token_utilities_top .box_left .title, 
+  .section-8 .token_utilities_bottom .box_left .title ,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .title,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .money{
+    font-size: 26px;
+  }
+  .section-8 .token_utilities_top .box_left .subtitle, 
+  .section-8 .token_utilities_bottom .box_left .subtitle,
+  .section-8 .token_utilities_top .box_left span, 
+  .section-8 .token_utilities_bottom .box_left span,
+  .section-7 .characters_weapons_box .title,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .subtitle{
+    font-size: 20px; 
+  }
+
+  .section-5 li,
+  .section-6 .own_lands_box .section-subtitle,
+  .section-about .about-content p,
+  .section-gameplay .content-slide .content,
+  .section-11 ul li .name_position .name,
+  .footer-inner .email,.section-8 .token_utilities_top .box_left ul li,
+  .section-8 .token_utilities_bottom .box_left ul li,
+  .section-10 .list-roamap .item-roamap ul li,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .content{
+    font-size: 16px;
+  }
+  .section-10 .list-roamap .item-roamap .title,.section-11 ul li .name_position .position{
+    font-size: 14px;
+  }
+
+  .own_lands_box_right{
+    display: none;
+  }
+  .section-6{
+    padding: 0;
+  }
+  .section-6 .own_lands_box .own_lands_box_left{
+    width: 100%;
+  }
+  .section-6 .own_lands_box .own_lands_box_left .mySwiper{max-width: 100vw;}
+  .section-6 .own_lands_box .section-title, .section-6 .own_lands_box .section-subtitle{
+    text-align: center;
+  }
+  .section-6 .own_lands-button{
+    justify-content: center;
+  }
+  .section-6 .own_lands_box .own_lands_box_left .img-bg {
+    background-position: center;
+  }
+  .section-6 .own_lands_box .own_lands_box_left .mySwiper{
+    min-height: 250px;
+  }
+  .own_lands-button{
+    margin-top: 20px;
+  }
+  .section-7{
+    padding-top: 40px;
+  }
+  .section-8 .token_utilities_top .box_left, .section-8 .token_utilities_top .box_right, .section-8 .token_utilities_bottom .box_left, .section-8 .token_utilities_bottom .box_right{
+    width: 100%;
+  }
+  .section-8 .token_utilities_top .box_right {
+    .box_right_img1 {
+      display: none;
+    }
+    .box_right_img2 {
+      max-width: 250px;
+      margin: auto;
+      margin-top: 20px;
+    }
+  }
+  .roadmap-desktop{
+    display: none
+  }
+  .roadmap-mobile{
+    display: flex;
+  }
+  .section-10 .list-roamap .item-roamap{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .section-11 {
+    padding: 15px;
+    ul li {
+      margin: 10px 5px;
+    }
+  }
+  .section-12 .partners-top .title img{
+    max-width: 150px;
+  }
+  .footer-inner .email,.footer-inner form{
+    padding-top: 10px;
+  }
+  .footer-inner .social{
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  .section-about.section-2{
+    padding: 20px 0;
+  }
+  .section-about .about-image{
+    width: 15%;
+  }
+  .section-about .about-content{
+    width: 70%;
+  }
+  .btn-banner {
+    bottom: 15px;
+  }
+  .btn-banner .item-btn-banner{
+    font-size: 11px;
+  }
+  .btn-banner .item-btn-banner {
+    width: 70px;
+  }
+  .nav-top {
+    height: 60px;
+  }
+  .nav-mobile-button {
+    font-size: 25px;
+  }
+  .section-12 .list_partners{
+    margin-top: 15px;
+  }
+  .section-11 .list_our_team{
+    margin-bottom: 30px;
+  }
+  footer {
+    padding-top: 0;
+  }
+  .section-11 .container{
+    padding-bottom: 0;
+  }
+  .section-10 .list-roamap .item-roamap {
+    padding: 10px;
+  }
+  .section-8 .token_utilities_top .box_left ul li{
+    display: flex;
+    align-items: center;
+    i{margin-right: 5px;}
+  }
+  header.fixed_header .nav-top{height: 60px;}
+}
+@media (max-width:450px){
+  .section-title ,
+  .section-8 .token_utilities_top .box_left .title, 
+  .section-8 .token_utilities_bottom .box_left .title ,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .title,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .money{
+    font-size: 24px;
+  }
+  .section-8 .token_utilities_top .box_left .subtitle, 
+  .section-8 .token_utilities_bottom .box_left .subtitle,
+  .section-8 .token_utilities_top .box_left span, 
+  .section-8 .token_utilities_bottom .box_left span,
+  .section-7 .characters_weapons_box .title,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .subtitle{
+    font-size: 18px; 
+  }
+
+  .section-5 li,
+  .section-6 .own_lands_box .section-subtitle,
+  .section-about .about-content p,
+  .section-gameplay .content-slide .content,
+  .section-11 ul li .name_position .name,
+  .footer-inner .email,.section-8 .token_utilities_top .box_left ul li,
+  .section-8 .token_utilities_bottom .box_left ul li,
+  .section-10 .list-roamap .item-roamap ul li,
+  .section-7 .characters_weapons_box .characters_weapons_right .content_box .content{
+    font-size: 14px;
+  }
+  .section-10 .list-roamap .item-roamap .title,.section-11 ul li .name_position .position{
+    font-size: 12px;
+  }
+  .section-9{
+    padding: 0px 0 50px;
+  }
+  .list_weapon{
+    margin-bottom: 20px;
+  }
+  .section-6 .own_lands_box .own_lands_box_left .mySwiper{
+    min-height: 190px;
+  }
+  .section-gameplay .gameplay-slider .gameplay-button-prev, .section-gameplay .gameplay-slider .gameplay-button-next, .section-6 .own_lands-button .own_lands-button-prev, .section-6 .own_lands-button .own_lands-button-next{
+    max-width: 30px;
+  }
+ }
