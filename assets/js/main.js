@@ -1,52 +1,4 @@
-jQuery(document).ready(function($){ 
-    var swiper = new Swiper(".section-gameplay .mySwiper", {
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-    });
 
-    var swiper2 = new Swiper(".section-gameplay .mySwiper2", {
-        spaceBetween: 10,
-        slidesPerView: 1,
-        loop:true,
-        navigation: {
-        nextEl: ".gameplay-button-next",
-        prevEl: ".gameplay-button-prev",
-        },
-        thumbs: {
-            swiper: swiper,
-            multipleActiveThumbs : false,
-        },
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-    });
-
-    var swiper3 = new Swiper(".own_lands_box_left .mySwiper", {
-        spaceBetween: 30,
-        slidesPerView: 3,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: ".own_lands-button-next",
-            prevEl: ".own_lands-button-prev",
-        },
-    });
-
-    AOS.init();      
-
-});
-jQuery(document).ready(function($){ 
-    $('.playPause-btn').click(function(){
-        $('.icn-pause-play').toggle();
-        $('.image-video').toggle();
-    });
-});  
 
 jQuery(document).ready(function($) {
     if ($(window).width() < 1025) {
@@ -100,6 +52,57 @@ jQuery(document).ready(function($) {
 
     
 });
+
+jQuery(document).ready(function($){ 
+    var swiper = new Swiper(".section-gameplay .mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper2 = new Swiper(".section-gameplay .mySwiper2", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        loop:true,
+        navigation: {
+        nextEl: ".gameplay-button-next",
+        prevEl: ".gameplay-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+            multipleActiveThumbs : false,
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    });
+
+    var swiper3 = new Swiper(".own_lands_box_left .mySwiper", {
+        spaceBetween: 30,
+        slidesPerView: 3,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".own_lands-button-next",
+            prevEl: ".own_lands-button-prev",
+        },
+    });
+
+    AOS.init();      
+
+});
+
+jQuery(document).ready(function($){ 
+    $('.playPause-btn').click(function(){
+        $('.icn-pause-play').toggle();
+        $('.image-video').toggle();
+    });
+});  
 
 jQuery(document).ready(function($) {
 
