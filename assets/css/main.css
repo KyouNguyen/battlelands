@@ -1743,12 +1743,12 @@ header .btn_header::before {
 .section-10 .list-roamap .list-roamap-left .item-roamap {
   margin-bottom: 110px;
 }
-.section-10 .list-roamap .list-roamap-left .item-roamap.roadmap-selected {
+.section-10 .list-roamap .item-roamap.roadmap-selected {
   background: #00A2FF;
   color: #000;
   position: relative;
 }
-.section-10 .list-roamap .list-roamap-left .item-roamap.roadmap-selected:after {
+.section-10 .list-roamap  .item-roamap.roadmap-selected:after {
   content: url('../images/label-now.png');
   position: absolute;
   top: -40px;
@@ -2331,6 +2331,7 @@ footer .vector {
 
   .section-12 .list_partners ul li {
     max-width: 85px;
+    margin-bottom: 40px;
   }
 
   .footer-inner .social {
@@ -2349,27 +2350,60 @@ footer .vector {
   .section-4 {
     min-height: 650px;
   }
+  
+  .section-6 {
+    padding-top: 0px;
+    padding-bottom: 40px;
+  }
 
   .section-6 .own_lands_box .own_lands_box_right {
     width: 300px;
+    margin-right: 25px;
   }
 
   .section-6 .own_lands_box .own_lands_box_left {
-    width: calc(100% - 300px);
+    width: calc(100% - 300px - 25px);
   }
 
   .section-gameplay .content-slide {
     top: 30px;
     left: 30px;
   }
+
+  .section-9 {
+    padding: 50px 0 50px;
+  }
+  .section-11 {
+    padding-top: 25px;
+    padding-bottom: 0;
+  }
+  .section-8 .token_utilities_top {
+    margin-top: 30px;
+  }
+  .section-8 .token_utilities_top .box_left, .section-8 .token_utilities_bottom .box_left {
+    flex: 1 1;
+    padding-left: 100px;
+  }
+  .section-8 .token_utilities_top .box_right, .section-8 .token_utilities_bottom .box_right {
+    flex: 0 1 40%;
+    width: 40%;
+    min-height: 800px;
+  }
+  .section-8 .token_utilities_top .box_right img:not(:first-child) {
+    padding-top: 200px;
+  }
+  .section-8 .box_right_img2 {
+    max-width: 100%;
+  }
 }
 @media (max-width: 992px) {
   .section-6 .own_lands_box .own_lands_box_right {
     width: 200px;
+    margin-right: 15px;
   }
 
   .section-6 .own_lands_box .own_lands_box_left {
-    width: calc(100% - 200px);
+    width: calc(100% - 200px - 15px);
   }
 
   .section-6 .own_lands_box .own_lands_box_left .mySwiper {
@@ -2384,6 +2418,10 @@ footer .vector {
   .section-gameplay .gameplay-slider .gameplay-button-prev,
 .section-gameplay .gameplay-slider .gameplay-button-next {
     display: none;
+  }
+
+  .section-gameplay .container .container-inner {
+  padding-top: 45px;
   }
 
   .section-5 .container {
@@ -2522,10 +2560,14 @@ footer .vector {
 
   .section-8 .token_utilities_top .box_left, .section-8 .token_utilities_top .box_right, .section-8 .token_utilities_bottom .box_left, .section-8 .token_utilities_bottom .box_right {
     width: 100%;
+    flex-basis: 100%;
+    min-height: unset;
   }
 
   .section-8 .token_utilities_top .box_right .box_right_img1 {
-    display: none;
+  }
+  .section-8 .token_utilities_top .box_right img:not(:first-child) {
+    padding-top: unset;
   }
   .section-8 .token_utilities_top .box_right .box_right_img2 {
     max-width: 250px;
