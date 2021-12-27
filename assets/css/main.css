@@ -53,18 +53,20 @@ i.discord {
 }
 
 .nav-items a {
+  text-transform: uppercase;
   line-height: 1;
   color: #fff;
   font-weight: 500;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .logo img {
@@ -117,7 +119,7 @@ i.discord {
 }
 
 .section-title {
-  font-family: "Chakra Petch", sans-serif;
+  font-family: "Teko", sans-serif;
   font-style: normal;
   font-weight: bold;
   text-align: center;
@@ -197,6 +199,7 @@ i.discord {
 }
 .trailer-wrapper .icn-pause-play.icn-pause {
   display: none;
+  content: url(../images/pause.png);
 }
 .trailer-wrapper .icn-pause {
   opacity: 0;
@@ -215,16 +218,18 @@ i.discord {
           justify-content: unset;
 }
 .trailer-wrapper .icn-pause-play {
-  -webkit-box-shadow: 0px 0px 16px #ffb206, inset 0px 4px 16px rgba(255, 178, 6, 0.5), inset 0px -2px 8px #ffb000, inset 0px -10px 8px rgba(255, 178, 6, 0.5);
+  z-index: 6;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  content: url('../images/play.png');
+  cursor: pointer;
+  /*-webkit-box-shadow: 0px 0px 16px #ffb206, inset 0px 4px 16px rgba(255, 178, 6, 0.5), inset 0px -2px 8px #ffb000, inset 0px -10px 8px rgba(255, 178, 6, 0.5);
           box-shadow: 0px 0px 16px #ffb206, inset 0px 4px 16px rgba(255, 178, 6, 0.5), inset 0px -2px 8px #ffb000, inset 0px -10px 8px rgba(255, 178, 6, 0.5);
   width: 70px;
   height: 70px;
-  background-color: #FCFE15;
-  z-index: 6;
-  opacity: 1;
   border-radius: 50%;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
+  background-color: #FCFE15;
+  opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -234,17 +239,21 @@ i.discord {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  cursor: pointer;
+  color: #ffe211;*/
 }
 .trailer-wrapper .icn-pause-play i {
   font-size: 25px;
-  color: #002687;
+  color: #ffe211;
 }
+
 .trailer-wrapper .icn-pause-play:hover {
-  background-color: #002687;
-  -webkit-box-shadow: 0 0 30px #00268799;
-          box-shadow: 0 0 30px #00268799;
+  animation: play 0.3s linear 1;
 }
+
+@keyframes play{
+  50%  {transform: scale(1.2);}
+}
+
 .trailer-wrapper .icn-pause-play:hover i {
   color: #FCFE15;
 }
@@ -470,6 +479,14 @@ i.discord {
           align-items: center;
   width: 100%;
   font-size: 40px;
+}
+
+.section-5 li i {
+  
+}
+
+.section-5 li span {
+  flex: 1 1;
 }
 
 .section-5 .title-line {
@@ -739,7 +756,7 @@ ul.nav-footer > *:is(.first-row, .second-row) {
   }
 
   .section-title, .title-line {
-    margin-bottom: 64px;
+    margin-bottom: 10px;
   }
 
   .gameplay-pagination {
@@ -1292,6 +1309,7 @@ header .btn_header::before {
 
 .section-gameplay {
   background-position: bottom;
+  background-size: 100% 100%;
 }
 .section-gameplay .container .container-inner {
   width: 100%;
@@ -1307,6 +1325,9 @@ header .btn_header::before {
   height: 230px;
   position: absolute;
   bottom: 0;
+}
+.section-gameplay .container .container-inner .mySwiper[thumbsslider] > .swiper-wrapper > .swiper-slide {
+  flex: 1 1;
 }
 .section-gameplay .gameplay-slider {
   max-width: 1320px;
@@ -1360,7 +1381,10 @@ header .btn_header::before {
           align-items: center;
 }
 .section-5 .invest-to-earn-box .box-left, .section-5 .invest-to-earn-box .box-right {
-  width: 50%;
+  width: 52.5%;
+}
+.section-5 .invest-to-earn-box .box-right {
+  width: 47.5%;
 }
 .section-5 .section-title {
   text-align: center;
@@ -1368,6 +1392,7 @@ header .btn_header::before {
 .section-5 .title-line {
   background-position: center;
 }
+.section-5 img {}
 
 .section-6 {
   padding: 70px 0;
@@ -1378,6 +1403,7 @@ header .btn_header::before {
   position: absolute;
   right: 0;
   height: 100%;
+  top: 0;
 }
 .section-6 .own_lands_box {
   display: -webkit-box;
@@ -1457,6 +1483,9 @@ header .btn_header::before {
           align-items: flex-end;
   padding-bottom: 30px;
 }
+.section-7 .container .container-inner {
+  align-self: center;
+}
 .section-7 .characters_weapons_box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1524,6 +1553,7 @@ header .btn_header::before {
   background: url("../images/bg_section8.png");
   background-position: bottom;
   background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 .section-8 .token_utilities_top, .section-8 .token_utilities_bottom {
   display: -webkit-box;
@@ -1618,6 +1648,7 @@ header .btn_header::before {
 }
 .section-10 .list-roamap .list-roamap-left, .section-10 .list-roamap .list-roamap-right {
   width: 50%;
+  padding: 50px 0;
 }
 .section-10 .list-roamap .list-roamap-left {
   height: -webkit-max-content;
@@ -1651,14 +1682,14 @@ header .btn_header::before {
 }
 .section-10 .list-roamap .list-roamap-right::after {
   content: "";
-  height: 100%;
+  height: calc(100% + 20px);
   background-image: url("../images/Rectangle 40725.png");
   position: absolute;
   z-index: 8;
   left: 0;
   width: 5px;
-  top: 0px;
-  background-size: contain;
+  top: -20px;
+  background-size: 100% 100%;
 }
 .section-10 .list-roamap .item-roamap {
   border: 3px solid #29FBB5;
@@ -1709,6 +1740,7 @@ header .btn_header::before {
 .section-11 {
   background: url("../images/bgsection11.png");
   padding: 75px 77px;
+  background-size: 100% 100%;
 }
 .section-11 .container {
   -webkit-box-align: end;

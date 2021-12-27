@@ -1,46 +1,44 @@
-var swiper = new Swiper(".section-gameplay .mySwiper", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
+jQuery(document).ready(function($){ 
+    var swiper = new Swiper(".section-gameplay .mySwiper", {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
 
-var swiper2 = new Swiper(".section-gameplay .mySwiper2", {
-    spaceBetween: 10,
-    loop:true,
-    navigation: {
-      nextEl: ".gameplay-button-next",
-      prevEl: ".gameplay-button-prev",
-    },
-    thumbs: {
-        swiper: swiper,
-    },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-});
+    var swiper2 = new Swiper(".section-gameplay .mySwiper2", {
+        spaceBetween: 10,
+        slidesPerView: 1,
+        loop:true,
+        navigation: {
+        nextEl: ".gameplay-button-next",
+        prevEl: ".gameplay-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+            multipleActiveThumbs : false,
+        },
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+    });
 
-var swiper3 = new Swiper(".own_lands_box_left .mySwiper", {
-    spaceBetween: 30,
-    slidesPerView: 3,
-    loop: true,
-    navigation: {
-        nextEl: ".own_lands-button-prev",
-        prevEl: ".own_lands-button-next",
-    },
-});
+    var swiper3 = new Swiper(".own_lands_box_left .mySwiper", {
+        spaceBetween: 30,
+        slidesPerView: 3,
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: ".own_lands-button-next",
+            prevEl: ".own_lands-button-prev",
+        },
+    });
 
-AOS.init();
-
-var myVideo = document.getElementById("sectionBanner-video");
-function playPause() {
-    if (myVideo.paused) {
-        myVideo.play();
-    } else {
-        myVideo.pause();
-    }
-}       
+    AOS.init();      
 
 });
 jQuery(document).ready(function($){ 
@@ -71,18 +69,20 @@ jQuery(document).ready(function($) {
         $('.site-content-wrap > .menu .nav-items > li > a').on('click', menuMobileOut);
     }
     else {
-        $('.site-content .container').each(function() {
-            var container_height = $(this).outerHeight(),
-                parent_height = $(this).parent().outerHeight(),
-                minus_height = container_height - parent_height,
-                summary_height = 0;
-            if(container_height >= parent_height) {
-                if( minus_height >= 0 ) {
-                    summary_height = container_height + minus_height + (150 - minus_height);
+        if($(window).width() < 1440) {
+            $('.site-content .container').each(function() {
+                var container_height = $(this).outerHeight(),
+                    parent_height = $(this).parent().outerHeight(),
+                    minus_height = container_height - parent_height,
+                    summary_height = 0;
+                if(container_height >= parent_height) {
+                    if( minus_height >= 0 ) {
+                        summary_height = container_height + minus_height + (150 - minus_height);
+                    }
+                    $(this).parent().outerHeight(summary_height);
                 }
-                $(this).parent().outerHeight(summary_height);
-            }
-        });
+            });
+        }
     }
     //tot
     var top = $(window).scrollTop();
