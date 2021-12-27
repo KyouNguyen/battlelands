@@ -22,7 +22,7 @@ jQuery(document).ready(function($) {
     }
     else {
         if($(window).width() < 1440) {
-            $('.site-content > div > .container').each(function() {
+            $('.site-content .container').each(function() {
                 var container_height = $(this).outerHeight(),
                     parent_height = $(this).parent().outerHeight(),
                     minus_height = container_height - parent_height,
