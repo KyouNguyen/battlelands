@@ -1337,6 +1337,28 @@ header .btn_header::before {
 }
 .section-gameplay .container .container-inner .mySwiper[thumbsslider] > .swiper-wrapper > .swiper-slide {
   flex: 1 1;
+  position: relative;
+}
+.section-gameplay .container .container-inner .mySwiper[thumbsslider] > .swiper-wrapper > .swiper-slide:before, .section-gameplay .container .container-inner .mySwiper[thumbsslider] > .swiper-wrapper > .swiper-slide-thumb-active:after {
+  position: absolute;
+  content: ' ';
+  background: #2B1840;
+  opacity: .6;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+  transition: 0.2s all ease-in-out;
+}
+.section-gameplay .container .container-inner .mySwiper[thumbsslider] > .swiper-wrapper > .swiper-slide-thumb-active:after {
+  border: 5px solid #fff;
+  opacity: 1;
+  background: transparent;
+}
+.section-gameplay .container .container-inner .mySwiper[thumbsslider] > .swiper-wrapper > .swiper-slide:hover:before, .section-gameplay .container .container-inner .mySwiper[thumbsslider] > .swiper-wrapper > .swiper-slide-thumb-active:before {
+  opacity: 0 !important;
 }
 .section-gameplay .container .container-inner .mySwiper[thumbsslider] > .swiper-wrapper > .swiper-slide img {
   position: relative;
@@ -1680,6 +1702,13 @@ header .btn_header::before {
 }
 .section-9 .chart img {
   margin: auto;
+  margin-top: 50px;
+  width: 0;
+  height: 100%;
+  transition: all 0.5s linear;
+}
+.section-9 .chart.aos-animate img {
+  width: 100%;
 }
 .section-9 .section-title {
   margin-bottom: 0;
