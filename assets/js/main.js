@@ -55,8 +55,8 @@ jQuery(document).ready(function($) {
 
 jQuery(document).ready(function($){ 
     var swiper = new Swiper(".section-gameplay .mySwiper", {
-        spaceBetween: 10,
-        slidesPerView: 4,
+        spaceBetween: 28,
+        slidesPerView: 3,
         freeMode: true,
         watchSlidesProgress: true,
     });
@@ -136,17 +136,19 @@ jQuery(document).ready(function($) {
         index.removeClass('aos-init aos-animate');
         content_box.children().removeClass('aos-init aos-animate');
         index.data({
-            'src' : $(this).data('img'),
+            'src' : $(this).data('index'),
             'label' : $(this).data('label'),
             'title' : $(this).data('title'),
             'content' : $(this).data('content'),
             'money' : $(this).data('money'),
         });
-        if($(this).is('.item_charactor img')) {
-            $(this).parent('.item_charactor').addClass('selected').siblings().removeClass('selected');
-        } else if( $(this).is('.item_charactor') ) {
-            $(this).addClass('selected').siblings().removeClass('selected');
+        if( !$(this).hasClass('selected') ) {
+            $(this).children('img').attr('src', $(this).data('hover'));
+            $(this).siblings().each(function() {
+                $(this).children('img').attr('src', $(this).data('img'));
+            });
         }
+        $(this).addClass('selected').siblings().removeClass('selected');
         $(document).trigger('data-char-changed');
 
         }

@@ -305,6 +305,15 @@ i.discord {
   width: 100%;
 }
 
+.section-4 .mySwiper[thumbsslider] {
+  margin-bottom: 28px;
+}
+
+.section-4 .mySwiper[thumbsslider] .swiper-wrapper {
+  width: calc(100% - 28px);
+  margin-left: 28px;
+}
+
 .section-4 .container {
   height: auto;
   position: absolute;
@@ -1329,6 +1338,9 @@ header .btn_header::before {
 .section-gameplay .container .container-inner .mySwiper[thumbsslider] > .swiper-wrapper > .swiper-slide {
   flex: 1 1;
 }
+.section-gameplay .container .container-inner .mySwiper[thumbsslider] > .swiper-wrapper > .swiper-slide img {
+  position: relative;
+}
 .section-gameplay .gameplay-slider {
   max-width: 1320px;
   margin: auto;
@@ -1419,10 +1431,11 @@ header .btn_header::before {
           justify-content: center;
 }
 .section-6 .own_lands_box .own_lands_box_right {
-  width: 450px;
+  width: 40%;
+  margin-right: 50px;
 }
 .section-6 .own_lands_box .own_lands_box_left {
-  width: calc(100% - 450px);
+  width: calc(100% - 40% - 50px);
   min-height: 400px;
 }
 .section-6 .own_lands_box .own_lands_box_left .img-bg {
@@ -1514,6 +1527,8 @@ header .btn_header::before {
   margin-right: 15px;
   max-width: 130px;
 }
+.section-7 .characters_weapons_box .list_weapon li img {
+}
 .section-7 .characters_weapons_box .title {
   width: 100%;
   font-size: 40px;
@@ -1578,6 +1593,9 @@ header .btn_header::before {
   font-size: 32px;
   margin-bottom: 15px;
   font-weight: 500;
+  text-transform: uppercase;
+  z-index: 3;
+  position: relative;
 }
 .section-8 .token_utilities_top .box_left span, .section-8 .token_utilities_bottom .box_left span {
   font-size: 36px;
@@ -1587,12 +1605,50 @@ header .btn_header::before {
   font-size: 64px;
   color: #3CFFD0;
   line-height: 60px;
+  position: relative;
+  z-index: 4;
+}
+.section-8 .token_utilities_top .box_left .subtitle:before {
+  content: url('../images/title-dot.png');
+  position: absolute;
+  left: -60px;
+  z-index: 2;
+}
+.section-8 .token_utilities_top .box_left .subtitle:after {
+  position: absolute;
+  font-size: 183px;
+  line-height: 1;
+  left: -25px;
+  top: -30px;
+  font-family:
+  'Teko', sans-serif;
+  color: rgba(126, 129, 255, 0.5);
+  z-index: -1;
+}
+.section-8 .token_utilities_top .box_left .list_Governance .subtitle:after {
+  content: '1';
+}
+.section-8 .token_utilities_top .box_left .list_Discover .subtitle:after {
+  content: '2';
 }
 .section-8 .token_utilities_top .box_left .span, .section-8 .token_utilities_bottom .box_left .span {
   font-size: 36px;
 }
 .section-8 .token_utilities_top .box_left .list_Governance, .section-8 .token_utilities_bottom .box_left .list_Governance {
-  margin-bottom: 60px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+.section-8 .token_utilities_top .box_left .list_Governance:before {
+  position: absolute;
+  content: ' ';
+  width: 2px;
+  height: 100%;
+  z-index: 1;
+  top: 20px;
+  left: -42.5px;
+  border: 1px dashed #FFFFFF;
+  box-shadow: 0px 0px 21px rgba(255, 233, 32, 0.5);
 }
 .section-8 .token_utilities_top .box_left ul li, .section-8 .token_utilities_bottom .box_left ul li {
   font-size: 28px;
@@ -1657,6 +1713,17 @@ header .btn_header::before {
 }
 .section-10 .list-roamap .list-roamap-left .item-roamap {
   margin-bottom: 110px;
+}
+.section-10 .list-roamap .list-roamap-left .item-roamap.roadmap-selected {
+  background: #00A2FF;
+  color: #000;
+  position: relative;
+}
+.section-10 .list-roamap .list-roamap-left .item-roamap.roadmap-selected:after {
+  content: url('../images/label-now.png');
+  position: absolute;
+  top: -40px;
+  right: -40px;
 }
 .section-10 .list-roamap .list-roamap-left .item-roamap::before {
   right: -127px;
@@ -1818,13 +1885,13 @@ header .btn_header::before {
           justify-content: center;
 }
 .section-12 .list_partners ul li {
-  margin: 0 50px 40px 50px;
+  margin: 0 50px 130px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .section-12 .section-title {
   margin-bottom: 0;
@@ -1902,12 +1969,18 @@ footer .vector {
 }
 @media screen and (min-width: 1500px) {
   .nav-top-inner, .container {
-    max-width: 1430px;
+    max-width: 1320px;
   }
 }
 @media screen and (min-width: 1920px) {
   .nav-top-inner, .container {
     max-width: 1720px;
+  }
+  .section-8 .token_utilities_top .box_left .subtitle:before {
+    left: -80px;
+  }
+  .section-8 .token_utilities_top .box_left .list_Governance:before {
+    left: -62.5px;
   }
 }
 @media (min-width: 1600px) and (max-width: 1919px) {
