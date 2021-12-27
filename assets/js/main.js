@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
                     if( minus_height >= 0 ) {
                         summary_height = container_height + minus_height + (150 - minus_height);
                     }
-                    $(this).parent().outerHeight(summary_height);
+                    $(this).parent().css('min-height', summary_height);
                 }
             });
         }
