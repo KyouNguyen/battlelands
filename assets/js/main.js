@@ -1,17 +1,3 @@
-jQuery(document).ready(function($) {
-    $('.site-content .container').each(function() {
-        var container_height = $(this).outerHeight(),
-            parent_height = $(this).parent().outerHeight(),
-            minus_height = container_height - parent_height,
-            summary_height = 0;
-        if(container_height >= parent_height) {
-            if( minus_height >= 0 ) {
-                summary_height = container_height + minus_height + (150 - minus_height);
-            }
-            $(this).parent().outerHeight(summary_height);
-        }
-    });
-        
 var swiper = new Swiper(".section-gameplay .mySwiper", {
     spaceBetween: 10,
     slidesPerView: 4,
@@ -85,6 +71,18 @@ jQuery(document).ready(function($) {
         $('.site-content-wrap > .menu .nav-items > li > a').on('click', menuMobileOut);
     }
     else {
+        $('.site-content .container').each(function() {
+            var container_height = $(this).outerHeight(),
+                parent_height = $(this).parent().outerHeight(),
+                minus_height = container_height - parent_height,
+                summary_height = 0;
+            if(container_height >= parent_height) {
+                if( minus_height >= 0 ) {
+                    summary_height = container_height + minus_height + (150 - minus_height);
+                }
+                $(this).parent().outerHeight(summary_height);
+            }
+        });
     }
     //tot
     var top = $(window).scrollTop();
