@@ -1906,12 +1906,13 @@ header .btn_header::before {
 .section-12 .list_partners ul {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: inline-flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
 }
 .section-12 .list_partners ul li {
   margin: 0 50px 130px 50px;
@@ -2329,8 +2330,17 @@ footer .vector {
     max-width: 120px;
   }
 
+  .section-12 .list_partners ul {
+    margin-top: 30px;
+    column-gap: 50px;
+    justify-content: space-between;
+  }
+
   .section-12 .list_partners ul li {
-    max-width: 85px;
+    flex: 1 1 calc(50% - 30px);
+    margin: unset;
+    max-width: calc(50% - 30px);
+    margin-bottom: 50px;
   }
 
   .footer-inner .social {
