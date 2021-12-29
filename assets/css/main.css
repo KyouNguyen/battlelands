@@ -2334,6 +2334,7 @@ footer .vector {
     margin-top: 30px;
     column-gap: 50px;
     justify-content: space-between;
+    justify-content: center;
   }
 
   .section-12 .list_partners ul li {
@@ -2341,6 +2342,8 @@ footer .vector {
     margin: unset;
     max-width: calc(50% - 30px);
     margin-bottom: 50px;
+    text-align: center;
+    justify-content: center;
   }
 
   .footer-inner .social {
