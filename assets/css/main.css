@@ -661,6 +661,7 @@ ul.nav-footer > *:is(.first-row, .second-row) {
 
   .nav-items > li > a {
     position: relative;
+    font-size: 13px;
   }
 
   .nav-items > li > a:before {
@@ -1997,10 +1998,17 @@ footer .vector {
   .nav-top-inner, .container {
     max-width: 1230px;
   }
+  .nav-items > li > a {
+    font-size: 16px;
+  }
 }
 @media screen and (min-width: 1500px) {
   .nav-top-inner, .container {
     max-width: 1320px;
+  }
+  
+  .nav-items > li > a {
+    font-size: 18px;
   }
 }
 @media screen and (min-width: 1920px) {
@@ -2174,7 +2182,7 @@ footer .vector {
   }
 
   .nav-items a {
-    font-size: 19px;
+    font-size: 16px;
   }
 
   header .btn_header {
