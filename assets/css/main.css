@@ -198,8 +198,8 @@ i.discord {
   position: absolute;
 }
 .trailer-wrapper .icn-pause-play.icn-pause {
-  display: none;
   content: url(../images/pause.png);
+  display: block;
 }
 .trailer-wrapper .icn-pause {
   opacity: 0;
@@ -210,6 +210,7 @@ i.discord {
   top: 0;
   width: 100%;
   height: 100%;
+  display: none;
 }
 .trailer-wrapper .icn-play {
   padding-left: 5px;
@@ -240,6 +241,7 @@ i.discord {
       -ms-flex-pack: center;
           justify-content: center;
   color: #ffe211;*/
+  display: none;
 }
 .trailer-wrapper .icn-pause-play i {
   font-size: 25px;
@@ -1545,9 +1547,7 @@ header .btn_header::before {
   max-width: 700px;
 }
 .section-7 .characters_weapons_box .list_weapon li, .section-7 .characters_weapons_box .list_charactor li {
-  width: calc(100%/4 - 15px);
-  margin-right: 15px;
-  max-width: 130px;
+  width: calc(100%/4);
 }
 .section-7 .characters_weapons_box .list_weapon li img {
 }
@@ -1709,6 +1709,7 @@ header .btn_header::before {
 }
 .section-9 .chart.aos-animate img {
   width: 100%;
+  max-width: 100%;
 }
 .section-9 .section-title {
   margin-bottom: 0;
@@ -2108,7 +2109,6 @@ footer .vector {
 
   .section-7 .characters_weapons_box .list_weapon li,
 .section-7 .characters_weapons_box .list_charactor li {
-    max-width: 110px;
   }
 }
 @media (min-width: 992px) and (max-width: 1299px) {
