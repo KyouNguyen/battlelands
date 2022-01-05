@@ -1313,7 +1313,8 @@ header .btn_header::before {
   width: 50%;
 }
 .section-about .about-content p {
-  font-size: 36px;
+  font-size: 28px;
+  font-weight: 400;
 }
 
 .section-teaser .container {
@@ -1466,16 +1467,15 @@ header .btn_header::before {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: left;
 }
 .section-6 .own_lands_box .own_lands_box_right {
-  width: 40%;
   margin-right: 50px;
 }
 .section-6 .own_lands_box .own_lands_box_left {
@@ -1514,7 +1514,7 @@ header .btn_header::before {
 .section-6 .own_lands_box .section-subtitle {
   font-size: 28px;
   margin-bottom: 30px;
-  max-width: 826px;
+  max-width: calc(100% - 50px);
   font-weight: 300;
 }
 .section-6 .own_lands-button {
@@ -2316,6 +2316,9 @@ footer .vector {
   .section-1 .bg-overlay {
     display: none;
   }
+  .section-5 li span {
+    font-size: 16px;
+  }
 
   .section-title,
 .section-8 .token_utilities_top .box_left .title,
@@ -2548,6 +2551,7 @@ footer .vector {
 
   .section-6 .own_lands_box .section-title, .section-6 .own_lands_box .section-subtitle {
     text-align: center;
+    max-width: 100%;
   }
 
   .section-6 .own_lands-button {
@@ -2605,6 +2609,9 @@ footer .vector {
   }
   .section-11 ul li {
     margin: 10px 5px;
+  }
+  .section-11 ul li.our_advisor {
+    flex: 1 1 calc(100%/5);
   }
 
   .section-12 .partners-top .title img {
