@@ -492,6 +492,10 @@ i.discord {
   font-size: 40px;
 }
 
+.section-5 li:not(:last-child) {
+  padding-bottom: 15px;
+}
+
 .section-5 li i {
   
 }
@@ -2029,7 +2033,7 @@ footer .vector {
 
   .section-5 li,
 .section-6 .own_lands_box .section-subtitle {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .section-title {
