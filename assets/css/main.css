@@ -1576,6 +1576,7 @@ header .btn_header::before {
   width: 100%;
   font-size: 40px;
   text-align: left;
+  text-transform: uppercase;
 }
 .section-7 .characters_weapons_box .characters_weapons_right {
   display: -webkit-box;
