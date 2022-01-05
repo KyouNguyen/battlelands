@@ -502,6 +502,8 @@ i.discord {
 
 .section-5 li span {
   flex: 1 1;
+  font-size: 28px;
+  font-weight: 300;
 }
 
 .section-5 .title-line {
@@ -771,8 +773,12 @@ ul.nav-footer > *:is(.first-row, .second-row) {
     margin: 0 30px;
   }
 
-  .section-title, .title-line {
-    margin-bottom: 10px;
+  .section-title, .title-line, .section-8 .title-line {
+    margin-bottom: 2.5rem;
+    font-size: 80px;
+  }
+  .section-8 .title-line {
+    margin-bottom: 2.5rem !important;
   }
 
   .gameplay-pagination {
@@ -1405,10 +1411,19 @@ header .btn_header::before {
   top: 70px;
   left: 74px;
 }
+.section-gameplay .swiper-slide[aria-label="1 / 3"] .content-slide > img {
+  height: 80px;
+  width: auto;
+}
+.section-gameplay .swiper-slide[aria-label="1 / 3"] .content-slide {
+  max-width: 800px !important;
+}
 .section-gameplay .content-slide .content {
-  font-size: 34px;
+  font-size: 28px;
   text-align: left;
-  margin-top: 40px;
+  margin-top: 20px;
+  font-weight: 300;
+  line-height: 1.3;
 }
 
 .section-5 .invest-to-earn-box {
@@ -1497,9 +1512,10 @@ header .btn_header::before {
   text-align: left;
 }
 .section-6 .own_lands_box .section-subtitle {
-  font-size: 40px;
+  font-size: 28px;
   margin-bottom: 30px;
   max-width: 826px;
+  font-weight: 300;
 }
 .section-6 .own_lands-button {
   display: -webkit-box;
@@ -1585,6 +1601,7 @@ header .btn_header::before {
 }
 .section-7 .characters_weapons_box .characters_weapons_right .content_box .content {
   font-size: 20px;
+  margin-bottom: 15px;
 }
 .section-7 .characters_weapons_box .characters_weapons_right .content_box .money {
   font-size: 36px;
@@ -1680,6 +1697,7 @@ header .btn_header::before {
 .section-8 .token_utilities_top .box_left ul li, .section-8 .token_utilities_bottom .box_left ul li {
   font-size: 28px;
   margin-bottom: 15px;
+  font-weight: 400;
 }
 .section-8 .token_utilities_top .box_left ul li .item, .section-8 .token_utilities_bottom .box_left ul li .item {
   content: url(../images/icon_8.png);
@@ -1833,6 +1851,8 @@ header .btn_header::before {
 .section-10 .list-roamap .item-roamap ul li {
   font-size: 26px;
   list-style: disc;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .roadmap-mobile {
@@ -1852,6 +1872,7 @@ header .btn_header::before {
 }
 .section-11 .section-title {
   margin-bottom: 0;
+  text-transform: uppercase;
 }
 .section-11 .list_our_team {
   margin-bottom: 60px;
@@ -1875,11 +1896,17 @@ header .btn_header::before {
   max-width: 238px;
 }
 .section-11 ul li .name_position .name {
-  font-size: 36px;
+  font-size: 30px;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 .section-11 ul li .name_position .position {
   font-size: 26px;
   font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .section-12 {
