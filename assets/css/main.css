@@ -686,7 +686,7 @@ ul.nav-footer > *:is(.first-row, .second-row) {
   }
 
   .site-content > *:nth-child(-n+4) {
-    height: 100vh;
+    min-height: 100vh;
   }
 
   .section-title {
@@ -1453,7 +1453,7 @@ header .btn_header::before {
 
 .section-6 {
   padding: 70px 0;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
 }
 .section-6 .bck-sec6 {
@@ -1477,10 +1477,12 @@ header .btn_header::before {
 }
 .section-6 .own_lands_box .own_lands_box_right {
   margin-right: 50px;
+  flex: 1 1;
 }
 .section-6 .own_lands_box .own_lands_box_left {
   width: calc(100% - 40% - 50px);
   min-height: 400px;
+  flex-wrap: wrap;
 }
 .section-6 .own_lands_box .own_lands_box_left .img-bg {
   background-position: left;
@@ -1490,7 +1492,6 @@ header .btn_header::before {
 }
 .section-6 .own_lands_box .own_lands_box_left .mySwiper {
   max-width: calc(100vw - 450px);
-  min-height: 400px;
 }
 .section-6 .own_lands_box .own_lands_box_left .swiper-slide {
   opacity: 0.4;
@@ -1533,7 +1534,7 @@ header .btn_header::before {
 }
 
 .section-7 {
-  height: 100vh;
+  min-height: 100vh;
 }
 .section-7 .container {
   -webkit-box-align: end;
