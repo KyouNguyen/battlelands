@@ -83,8 +83,13 @@ jQuery(document).ready(function($){
         spaceBetween: 30,
         slidesPerView: 3,
         loop: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        centerInsufficientSlides: true,
+        slideToClickedSlide: true,
+        centeredSlides: true,
         autoplay: {
-            delay: 5000,
+            delay: 5000000,
             disableOnInteraction: false,
         },
         navigation: {

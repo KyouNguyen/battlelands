@@ -142,7 +142,7 @@
                                 <div class="trailer-wrapper">
                                     <div class="video">
                                         <img src=./assets/images/section-1-bg.png alt='Battle Lands - Metaverse Project - Battle Royale Game' class="image-video">
-                                        <video id="sectionBanner-video" muted loop autoplay>
+                                        <video id="sectionBanner-video" muted loop autoplay onloadstart="this.volume=1">
                                             <source src="./assets/images/BattleLand_Teaser_16.9.mp4">
                                         </video>
                                         <div onclick = "playPause()" class="playPause-btn">
@@ -759,11 +759,26 @@
         return (docViewBottom >= elemTop && docViewTop <= elemBottom);
         }
         jQuery("#sectionBanner-video").each(function() {
-
             if (isScrolledIntoViewFact(jQuery(this))) {
-                jQuery(this).attr('autoplay', 'true');
+                //jQuery(this).attr('autoplay', 'true');
+                //jQuery(this).get(0).load();
+                //jQuery(this).siblings('.playPause-btn').children('.icn-pause-play').click();
+                //jQuery(this).get(0).play();
+                jQuery(this).removeAttr('muted');
             }
         });
+
+        jQuery(window).on('scroll',function() {
+            jQuery("#sectionBanner-video").each(function() {
+                if (isScrolledIntoViewFact(jQuery(this))) {
+                    //jQuery(this).attr('autoplay', 'true');
+                    //jQuery(this).get(0).load();
+                    //jQuery(this).siblings('.playPause-btn').children('.icn-pause-play').click();
+                    jQuery(this).removeAttr('muted');
+                }
+            });
+        });
+
         function playPause() {
             if (myVideo.paused) {
                 myVideo.play();
